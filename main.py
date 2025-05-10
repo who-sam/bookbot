@@ -1,4 +1,5 @@
 from stats import * 
+import sys
 
 
 
@@ -11,7 +12,14 @@ def get_book_text(path):
 
 
 def main():
-    file_content = get_book_text("./books/frankenstein.txt")
+    try:
+        file_path = sys.argv[1]
+    except IndexError:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
+
+    file_content = get_book_text(file_path)
     num_words = count_words(file_content)
     num_chars = count_chars(file_content)
 
