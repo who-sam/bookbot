@@ -21,10 +21,13 @@ def main():
 
     file_content = get_book_text(file_path)
     num_words = count_words(file_content)
+    num_line = line_count(file_content)
     num_chars, total = count_chars(file_content)
 
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Line Count ----------")
+    print(f"Found {num_line} total lines")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")

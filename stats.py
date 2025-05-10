@@ -29,3 +29,10 @@ def sort_dict(dict):
     char_num.sort(reverse=True, key=sort_key)
     return char_num
 
+
+def line_count(file):
+    num_line = 0
+    for c in file :
+        if c == "\n":
+            num_line +=1
+    return num_line
