@@ -28,7 +28,7 @@ def main():
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")
-    
+    print(f"Found {total} total chars")
     listed_chars = sort_dict(num_chars)
 
     for item in listed_chars:
