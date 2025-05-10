@@ -21,7 +21,7 @@ def main():
 
     file_content = get_book_text(file_path)
     num_words = count_words(file_content)
-    num_chars = count_chars(file_content)
+    num_chars, total = count_chars(file_content)
 
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")

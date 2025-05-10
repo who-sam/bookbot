@@ -6,12 +6,15 @@ def count_words(file):
 def count_chars(file):
     file_content = file.lower()
     counts = {}
+    total = 0
     for c in file_content:
         if c in counts:
             counts[c] +=1
+            total += 1
         else:
             counts[c] = 1
-    return counts
+            total += 1
+    return counts, total
 
 
 def sort_key(dict):
